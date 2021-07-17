@@ -1,0 +1,301 @@
+{%extends "layout.html"%}
+
+{% block content%}
+
+<!-- Page Heading -->
+<div class="page-heading">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Datos Estadísticos</h1>
+        <p>A partir de datos recolectados de bases de datos libres y aquellos que proporcionaron las personas que
+          gustosamente llenaron la encuesta propuesta en este sito web, se realiza un análisis. </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', { 'packages': ['corechart'] });
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+
+    var data6 = google.visualization.arrayToDataTable([
+      {% for key, value in data6.items() %}
+  {% if value is string %}
+  ['{{ key }}', '{{ value }}'],
+    {% else %}
+  ['{{ key }}', {{ value }}],
+    {% endif %}
+  {% endfor %}
+        ]);
+
+
+  var options = {
+    title: 'Total de participantes',
+   
+
+  };
+
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+  chart.draw(data6, options);
+      }
+</script>
+<div id="piechart" style="width: 650px; height: 450px;"></div>
+
+
+<div class="col-md-12">
+  <h2>Emociones negativas</h2>
+  <p>Un estado de ánimo negativo es la expresión de tristeza, soledad, desdicha, indefensión y/o pesimismo, lo que lleva al niño o adolescente a manifestar cambios en su estado de ánimo, con presencia de mal humor e irritabilidad, llorando o enfadándose con facilidad.</p>
+</div>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+
+
+  google.charts.load('current', { 'packages': ['corechart'] });
+  google.charts.setOnLoadCallback(ninas);
+  google.charts.setOnLoadCallback(ninos);
+  function ninas() {
+
+    var data = google.visualization.arrayToDataTable([
+      {% for key, value in data.items() %}
+  {% if value is string %}
+  ['{{ key }}', '{{ value }}'],
+    {% else %}
+  ['{{ key }}', {{ value }}],
+    {% endif %}
+  {% endfor %}
+        ]);
+
+
+
+  var options = {
+    title: 'Niñas con emociones negativas',
+    width: 350,
+    height: 350,
+    legend: 'none',
+    hAxis: {
+      title: 'Cantidad de niñas'
+    },
+    colors: ['#8B008B']
+  };
+
+  var chart = new google.visualization.BarChart(document.getElementById('niñas'));
+  chart.draw(data, options);
+    }
+
+  function ninos() {
+
+    var data1 = google.visualization.arrayToDataTable([
+      {% for key, value in data1.items() %}
+  {% if value is string %}
+  ['{{ key }}', '{{ value }}'],
+    {% else %}
+  ['{{ key }}', {{ value }}],
+    {% endif %}
+  {% endfor %}
+        ]);
+
+
+  var options = {
+    title: 'Niños con emociones negativas',
+    width: 350,
+    height: 350,
+    legend: 'none',
+    hAxis: {
+      title: 'Cantidad de niños'
+    },
+    colors: ['#395e80']
+  };
+
+
+  var chart = new google.visualization.BarChart(document.getElementById('niños'));
+  chart.draw(data1, options);
+    }
+</script>
+
+<table class="columns">
+  <tr>
+    <td>
+      <div id="niñas"></div>
+    </td>
+    <td>
+      <div id="niños"></div>
+    </td>
+  </tr>
+</table>
+
+<div class="col-md-12">
+  <h2>Autopercepción</h2>
+  <p>Las ideas de autodesprecio incluyen sentimientos de incapacidad, fealdad y culpabilidad, presentándose ideas de persecución, deseos de muerte y tentativas de suicidio, junto con ideas de huida de casa.</p>
+</div>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+
+
+  google.charts.load('current', { 'packages': ['corechart'] });
+  google.charts.setOnLoadCallback(ninas1);
+  google.charts.setOnLoadCallback(ninos1);
+  function ninas1() {
+
+    var data2 = google.visualization.arrayToDataTable([
+      {% for key, value in data2.items() %}
+  {% if value is string %}
+  ['{{ key }}', '{{ value }}'],
+    {% else %}
+  ['{{ key }}', {{ value }}],
+    {% endif %}
+  {% endfor %}
+          ]);
+
+
+  var options = {
+    title: 'Niñas con autopercepción negativa',
+    width: 350,
+    height: 350,
+    legend: 'none',
+    hAxis: {
+      title: 'Cantidad de niñas'
+    },
+    colors: ['#8B008B']
+  };
+
+  var chart = new google.visualization.BarChart(document.getElementById('niñas1'));
+  chart.draw(data2, options);
+      }
+
+  function ninos1() {
+
+    var data3 = google.visualization.arrayToDataTable([
+      {% for key, value in data3.items() %}
+  {% if value is string %}
+  ['{{ key }}', '{{ value }}'],
+    {% else %}
+  ['{{ key }}', {{ value }}],
+    {% endif %}
+  {% endfor %}
+          ]);
+
+
+  var options = {
+    title: 'Niños con autopercepción negativa',
+    width: 350,
+    height: 350,
+    legend: 'none',
+    hAxis: {
+      title: 'Cantidad de niños'
+    },
+    colors: ['#395e80']
+  };
+
+
+  var chart = new google.visualization.BarChart(document.getElementById('niños1'));
+  chart.draw(data3, options);
+      }
+</script>
+
+<table class="columns">
+  <tr>
+    <td>
+      <div id="niñas1"></div>
+    </td>
+    <td>
+      <div id="niños1"></div>
+    </td>
+  </tr>
+</table>
+
+
+<div class="col-md-12">
+  <h2></h2>
+  <p>En las siguientes gráficas se refleja la cantidad de niños y niñas que pueden presentar síntomas de depresión.</p>
+</div>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+
+
+  google.charts.load('current', { 'packages': ['corechart'] });
+  google.charts.setOnLoadCallback(ninas2);
+  google.charts.setOnLoadCallback(ninos2);
+  function ninas2() {
+
+    var data4 = google.visualization.arrayToDataTable([
+      {% for key, value in data4.items() %}
+  {% if value is string %}
+  ['{{ key }}', '{{ value }}'],
+    {% else %}
+  ['{{ key }}', {{ value }}],
+    {% endif %}
+  {% endfor %}
+        ]);
+
+
+
+  var options = {
+    title: 'Niñas con indicios de depresión',
+    width: 350,
+    height: 350,
+    legend: 'none',
+    hAxis: {
+      title: 'Cantidad de niñas'
+    },
+    colors: ['#8B008B']
+  };
+
+  var chart = new google.visualization.BarChart(document.getElementById('niñas2'));
+  chart.draw(data4, options);
+    }
+
+  function ninos2() {
+
+    var data5 = google.visualization.arrayToDataTable([
+      {% for key, value in data5.items() %}
+  {% if value is string %}
+  ['{{ key }}', '{{ value }}'],
+    {% else %}
+  ['{{ key }}', {{ value }}],
+    {% endif %}
+  {% endfor %}
+        ]);
+
+
+  var options = {
+    title: 'Niñas con indicios de depresión',
+    width: 350,
+    height: 350,
+    legend: 'none',
+    hAxis: {
+      title: 'Cantidad de niños'
+    },
+    colors: ['#395e80']
+  };
+
+
+  var chart = new google.visualization.BarChart(document.getElementById('niños2'));
+  chart.draw(data5, options);
+    }
+</script>
+
+<table class="columns">
+  <tr>
+    <td>
+      <div id="niñas2"></div>
+    </td>
+    <td>
+      <div id="niños2"></div>
+    </td>
+  </tr>
+</table>
+
+{% endblock %}

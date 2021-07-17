@@ -1,0 +1,86 @@
+{%extends "layout.html"%}
+{% block content%}
+
+<!-- Banner -->
+<section class="main-banner">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="banner-content">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="banner-caption">
+                <h4>¿Quiénes Somos?</h4>
+                <p>
+                <p>Sabias que en <strong>Stat-Covid</strong> evaluamos el impacto a nivel educativo que se tiene en los
+                  niños en edad de 7-12 años
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="service-item fourth-item">
+          <div class="icon"></div>
+          <h4>Encuesta</h4>
+          <p>Puedes contribuir con nosotros, tomandote unos minutos para contestar una encuesta.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-item fivth-item">
+          <div class="icon"></div>
+          <h4>Actualización</h4>
+          <p>Constantemente se realiza la adquisición de nueva información, esto permite la actualización de los datos
+            de forma regular.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-item sixth-item">
+          <div class="icon"></div>
+          <h4>Datos</h4>
+          <p>Visualización de datos estadísticos recolectados, debidamente analizados y agrupados para una
+            mejor comprensión.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Left Image -->
+<section class="left-image">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{{url_for('static', filename = 'images/left-image.jpg')}}" alt="">
+      </div>
+      <div class="col-md-6">
+        <div class="right-content">
+
+          <p>Las plataformas de manejo de datos se han convertido en una herramienta de apoyo, para la recopilación y
+            gestión de grandes cantidades de información. Con la evolución de las tecnologías este tipo de plataformas
+            se desarrollan en la “Nube”, dado que aportan agilidad y flexibilidad en el análisis de datos entre otras
+            cosas.<br> Lo anterior presenta una ventaja para los usuarios debido a que en este caso los niños post covid
+            19, pueden generar grandes flujos de información útil. Por esta razón es de interés crear una plataforma
+            computacional, que permitan recolectar información, caracterizar y posteriormente mostrar esta a los
+            interesados.</p>
+          <div class="primary-button">
+            <a href="{{url_for('impact')}}">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

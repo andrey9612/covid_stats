@@ -1,0 +1,519 @@
+{%extends "layout.html"%}
+
+{% block content%}
+
+<!-- Page Heading -->
+<div class="page-heading">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Encuesta</h1>
+        <p>Puedes contribuir con nosotros, tomandote unos minutos para contestar una encuesta mediante la cual
+          recolectamos información. Esta información será usada para fines académicos y de forma totalmente anónima sin
+          comprometer la información de ningún participante.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<!-- Cuestionario -->
+<form action="{{ url_for('predict')}}" method="post">
+  <section class="Cuestionaraio">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Cuestionario</h3>
+      </div>
+    </div>
+    <!-- Pregunta 1 -->
+    <div class="row">
+      <div class="col-md-12 col-lg-12">
+        <p><strong>Seleccione el genero del menor</strong> </p>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-12">
+      <select class="form-control" id="Genero" name="Genero" required>
+        <option> </option>
+        <option value="1">Femenino</option>
+        <option value="2">Masculino</option>
+        <option value="0">Otro</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 col-lg-12">
+        <p><strong>¿Qué edad tiene el menor?</strong> </p>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-lg-12">
+      <select class="form-control" id="Edad" name="Edad">
+        <option> </option>
+        <option value="7">Siete</option>
+        <option value="8">Ocho</option>
+        <option value="9">Nueve</option>
+        <option value="10">Diez</option>
+        <option value="11">Once</option>
+        <option value="12">Doce</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 col-lg-12">
+        <p><strong>¿Cuál es su grado escolar?</strong></p>
+      </div>
+    </div>
+    <div class="col-md-4  col-lg-12">
+
+      <select class="form-control" id="Grado escolar" name="Grado_Escolar">
+        <option> </option>
+        <option value="1">Primero</option>
+        <option value="2">Segundo</option>
+        <option value="3">Tercero</option>
+        <option value="4">Cuarto</option>
+        <option value="5">Quinto</option>
+        <option value="6">Sexto</option>
+        <option value="7">Septimo</option>
+        <option value="8">Octavo</option>
+        <option value="9">Noveno</option>
+      </select>
+    </div>
+
+    <br/>
+    <h4>¡Advertencia!</h4>
+        <p>Algunos item mostrados acontinuación deben tomarse con la mayor discreción posible dado que pueden presentar
+          sensibilidad a la temática. </p>
+    <h1></h1>
+    <h4>Seleccione una opción por cada uno de los item.</h4>
+    <br/>
+
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>1.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p1" name="p1">
+        <option> </option>
+        <option value="0">De vez en cuando estoy triste.</option>
+        <option value="1">Muchas veces estoy triste.</option>
+        <option value="2">Siempre estoy triste.</option>
+      </select>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>2.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p2" name="p2">
+        <option> </option>
+        <option value="2">Nunca me va a salir nada bien.</option>
+        <option value="1">No estoy muy seguro de si las cosas me van a salir bien.</option>
+        <option value="0">Las cosas me van a salir bien.</option>
+      </select>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>3.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p3" name="p3">
+        <option> </option>
+        <option value="0">La mayoría de las cosas las hago bien.</option>
+        <option value="1">Muchas cosas las hago mal.</option>
+        <option value="2">Todo lo hago mal.</option>
+      </select>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>4.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p4" name="p4">
+        <option> </option>
+        <option value="0">Muchas cosas me divierten.</option>
+        <option value="1">Algunas cosas me divierten.</option>
+        <option value="2">Nada me divierte.</option>
+      </select>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>5.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p5" name="p5">
+        <option> </option>
+        <option value="2">Siempre soy malo o mala.</option>
+        <option value="1">Muchas veces soy malo o mala.</option>
+        <option value="0">Algunas veces soy malo o mala.</option>
+      </select>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>6.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p6" name="p6">
+        <option> </option>
+        <option value="0">A veces pienso que me puedan pasar cosas malas.</option>
+        <option value="1">Me preocupa que pasen cosas malas.</option>
+        <option value="2">Estoy seguro de que me pasarán cosas muy malas.</option>
+      </select>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>7.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p7" name="p7">
+        <option> </option>
+        <option value="2">Me odio.</option>
+        <option value="1">No me gusta como soy.</option>
+        <option value="0">Me gusta como soy.</option>
+      </select>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>8.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p8" name="p8">
+        <option> </option>
+        <option value="2">Todas las cosas malas son por mi culpa.</option>
+        <option value="1">Muchas cosas malas son por mi culpa.</option>
+        <option value="0">Generalmente no tengo la culpa de que pasen cosas malas.</option>
+      </select>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>9.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p9" name="p9">
+        <option> </option>
+        <option value="0">No pienso en matarme.</option>
+        <option value="1">Pienso en matarme pero no lo haría.</option>
+        <option value="2">Quiero matarme.</option>
+      </select>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>10.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p10" name="p10">
+        <option> </option>
+        <option value="2">Todos los días tengo ganas de llorar.</option>
+        <option value="1">Muchos días tengo ganas de llorar.</option>
+        <option value="0">De vez en cuando tengo ganas de llorar.</option>
+      </select>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>11.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p11" name="p11">
+        <option> </option>
+        <option value="2">Siempre me preocupan las cosas.</option>
+        <option value="1">Muchas veces me preocupan las cosas.</option>
+        <option value="0">De vez en cuando me preocupan las cosas.</option>
+      </select>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>12.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p12" name="p12">
+        <option> </option>
+        <option value="0">Me gusta estar con la gente.</option>
+        <option value="1">Muchas veces no me gusta estar con la gente.</option>
+        <option value="2">Nunca me gusta estar con la gente.</option>
+      </select>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>13.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p13" name="p13">
+        <option> </option>
+        <option value="2">No puedo decidirme.</option>
+        <option value="1">Me cuesta decidirme.</option>
+        <option value="0">Me decido fácilmente.</option>
+      </select>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>14.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p14" name="p14">
+        <option> </option>
+        <option value="0">Soy simpático o simpática.</option>
+        <option value="1">Hay algunas cosas de mi apariencia que no me gustan.</option>
+        <option value="2">Soy feo o fea.</option>
+      </select>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>15.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p15" name="p15">
+        <option> </option>
+        <option value="2">Siempre me cuesta hacer las tareas.</option>
+        <option value="1">Muchas veces me cuesta hacer las tareas.</option>
+        <option value="0">No me cuesta hacer las tareas.</option>
+      </select>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>16.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p16" name="p16">
+        <option> </option>
+        <option value="2">Todas las noches me cuesta dormir.</option>
+        <option value="1">Muchas veces me cuesta dormir.</option>
+        <option value="0">Duermo muy bien.</option>
+      </select>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>17.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p17" name="p17">
+        <option> </option>
+        <option value="0">De vez en cuando estoy cansado o cansada.</option>
+        <option value="1">Muchos días estoy cansado o cansada.</option>
+        <option value="2">Siempre estoy cansado o cansada.</option>
+      </select>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>18.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p18" name="p18">
+        <option> </option>
+        <option value="2">La mayoría de los días no tengo ganas de comer.</option>
+        <option value="1">Muchos días no tengo ganas de comer.</option>
+        <option value="0">Como muy bien.</option>
+      </select>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>19.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p19" name="p19">
+        <option> </option>
+        <option value="0">No me preocupan el dolor ni la enfermedad.</option>
+        <option value="1">Muchas veces me preocupan el dolor y la enfermedad.</option>
+        <option value="2">Siempre me preocupan el dolor y la enfermedad.</option>
+      </select>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>20.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p20" name="p20">
+        <option> </option>
+        <option value="0">Nunca me siento solo o sola.</option>
+        <option value="1">Muchas veces me siento solo o sola.</option>
+        <option value="2">Siempre me siento solo o sola.</option>
+      </select>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>21.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p21" name="p21">
+        <option> </option>
+        <option value="2">Nunca me divierto en el colegio.</option>
+        <option value="1">Sólo a veces me divierto en el colegio.</option>
+        <option value="0">Muchas veces me divierto en el colegio.</option>
+      </select>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>22.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p22" name="p22">
+        <option> </option>
+        <option value="0">Tengo muchos amigos.</option>
+        <option value="1">Tengo algunos amigos, pero me gustaría tener más.</option>
+        <option value="2">No tengo amigos.</option>
+      </select>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>23.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p23" name="p23">
+        <option> </option>
+        <option value="0">Mi trabajo en el colegio es bueno.</option>
+        <option value="1">Mi trabajo en el colegio no es tan bueno como antes.</option>
+        <option value="2">Llevo muy mal los cursos que antes llevaba muy bien.</option>
+      </select>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>24.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p24" name="p24">
+        <option> </option>
+        <option value="2">Nunca podré ser tan bueno como otros niños.</option>
+        <option value="1">Si quiero, puedo ser tan bueno como otros niños.</option>
+        <option value="0">Soy tan bueno como otros niños.</option>
+      </select>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>25.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p25" name="p25">
+        <option> </option>
+        <option value="2">Nadie me quiere.</option>
+        <option value="1">No estoy seguro de que alguien me quiera.</option>
+        <option value="0">Estoy seguro de que alguien me quiere</option>
+      </select>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>26.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p26" name="p26">
+        <option> </option>
+        <option value="0">Generalmente hago lo que me dicen.</option>
+        <option value="1">Muchas veces no hago lo que me dicen.</option>
+        <option value="2">Nunca hago lo que me dicen.</option>
+      </select>
+    </div>
+    <br/>
+
+    <div class="row">
+      <div class="col-md-12 col-md-12">
+        <p><strong>27.Seleccione la opción que más se adapte</strong></p>
+      </div>
+    </div>
+
+    <div class="col-md-4  col-lg-12">
+      <select class="form-control" id="p27" name="p27">
+        <option> </option>
+        <option value="0">Me llevo bien con la gente.</option>
+        <option value="1">Muchas veces me peleo.</option>
+        <option value="2">Siempre me peleo.</option>
+      </select>
+    </div>
+    <br/>
+
+
+  </section>
+  <!--input type="text" name="interview_score" placeholder="Puntuación de la entrevista" required="required" /-->
+
+  <button type="submit" class="btn btn-primary btn-block btn-large" style="background-color:rgba(57,94,128,1)">Enviar</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,103 @@
+{%extends "layout.html"%}
+
+{% block content%}
+
+<!-- Page Heading -->
+<div class="page-heading">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Impacto educativo</h1>
+        <p> La pandemia del covid 19 afectado a gran parte de la población mundial, en especial a los adultos mayores,
+          por esta razón, la mayoría de las investigaciones realizadas se han enfocado en ellos, dejando de lado a los
+          niños una parte importante de la sociedad, en los cuales las consecuencias de esta enfermedad se van a
+          reflejar en un futuro, llegando a afectar la forma de vivir en posterioridad.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Simple Post -->
+<section class="simple-post">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <img src= "{{url_for('static', filename='images/simple-post.jpg')}}" alt="">
+        <div class="down-content">
+          <p> Los padres de familia, por el otro lado, se convirtieron en actores mas activos en este proceso, algunos
+            asumiendo el reto, otros postergándolo. El estudiante esta enfrentándose a retos nuevos que lo potencializan
+            a mejorar en sus habilidades.</p>
+          <p>En situaciones de emergencia, las escuelas son un lugar fundamental para el apoyo emocional, el monitoreo
+            de riesgos, la continuidad de los aprendizajes y el apoyo social y material para las y los estudiantes y sus
+            familias.</p>
+          <p>Hoy los colegios también han entendido que esta oportunidad los hace pensar que no solo las habilidades
+            duras importan, sino que es momento de que en el hogar se aproveche este tiempo para enseñar solidaridad,
+            empatía, adaptación al cambio, trabajo en equipo, colaboración y cooperación, habilidades más importantes
+            que las duras y que no necesariamente hacen parte del currículo escolar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="simple-post">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Desigualdad</h2>
+        <p>Existe un grupo considerable de estudiantes que están completamente excluidos, en especial en los países con
+          menos recursos. Hay que tener en cuenta que los adolescentes tienen mayor acceso a Internet y a teléfonos
+          celulares que los niños y niñas de enseñanza primaria, como se ha visto en la información recolectada por las
+          encuestas de Kids Online en la región (Trucco y Palma, 2020). Adicionalmente, en varios de estos países hay
+          proporciones importantes de adolescentes de 15 años que ya están fuera de la escuela, porque las tasas de
+          abandono escolar en la enseñanza secundaria son todavía altas en la región.</p>
+        <br><br>
+      </div>
+      <div class="col-md-6">
+        <h2>Consecuencias</h2>
+        <p>Las medidas de confinamiento significan, para gran parte de la población, vivir en condiciones de
+          hacinamiento por un período prolongado, lo que tiene graves implicancias para la salud mental de la población.
+        </p>
+        <p>El hacinamiento impide contar con un espacio adecuado para estudiar y descansar, lo que repercute en el
+          desarrollo cognitivo en la infancia y las trayectorias laborales y de bienestar en la adultez, a la vez que
+          favorecen una mayor propensión a situaciones de abuso (CEPAL/UNICEF, 2020).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form 
+<section class="contact-form">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <form id="contact" action="" method="post">
+          <div class="row">
+            <div class="col-md-12">
+              <fieldset>
+                <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+              </fieldset>
+            </div>
+            <div class="col-md-12">
+              <fieldset>
+                <input name="email" type="text" class="form-control" id="email" placeholder="Your email..." required="">
+              </fieldset>
+            </div>
+            <div class="col-md-12">
+              <fieldset>
+                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..."
+                  required=""></textarea>
+              </fieldset>
+            </div>
+            <div class="col-md-12">
+              <fieldset>
+                <button type="submit" id="form-submit" class="button">Send Message</button>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section> -->
+{% endblock %}
